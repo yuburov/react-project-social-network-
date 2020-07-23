@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./Users.module.css";
 import userPhoto from "../../assets/images/171-1717870_stockvader-predicted-cron-for-may-user-profile-icon-png.png";
+import {NavLink} from "react-router-dom";
 
 let Users = (props) => {
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -22,7 +23,9 @@ let Users = (props) => {
           props.users.map(u => <div key={u.id}>
         <span>
           <div>
-            <img className={s.photo} src={u.photos.small != null ? u.photos.small : userPhoto}/>
+            <NavLink to={'/profile/' + u.id}>
+              <img className={s.photo} src={u.photos.small != null ? u.photos.small : userPhoto}/>
+            </NavLink>
           </div>
           <div>
             {u.followed ? <button onClick={() => {
