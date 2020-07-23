@@ -13,5 +13,6 @@
 
 .app-wrapper-content {
     grid-area: c;
-    background-color: blueviolet;
+    background-color: #18113c;
+    color: white;
 }
