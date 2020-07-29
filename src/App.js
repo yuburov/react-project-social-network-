@@ -19,13 +19,13 @@ function App(props) {
           <HeaderComponent/>
           <Navbar/>
           <div className='app-wrapper-content'>
-            <Route path='/login' component={Login}/>
             <Route path='/dialogs' render={() => <DialogsContainer/>}/>
             <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
             <Route path='/users' render={() => <UsersContainer/>}/>
             <Route path='/news' component={News}/>
             <Route path='/music' component={Music}/>
             <Route path='/settings' component={Settings}/>
+            <Route path='/login' component={Login}/>
           </div>
         </div>
   );
